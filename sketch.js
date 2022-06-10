@@ -35,40 +35,36 @@ function draw() {
   text("Press 'Space' to Start Rotation",200,340);
   text("Press 'F' to Speed Rotation",200,360);
   text("Press 'S' to Slow Rotation",200,380);
+  
+  //WHEN THE GAMESTATE IS START MAKE THE FANS ROTATE WITH A SPEED OF 5
   if(gameState ==="start"){
     fan1.rotationSpeed = 5;
-    fan2.rotationSpeed = 5;
-    fan3.rotationSpeed = 5;
-    fan4.rotationSpeed = 5;
+    //fan1 is done so do it foe the rest fans
   }
   else if(gameState ==="stop"){
     fan1.rotationSpeed = 0;
-    fan2.rotationSpeed = 0;
-    fan3.rotationSpeed = 0;
-    fan4.rotationSpeed = 0;
+    //stop rotating the fans
+    
+    
   }
   else if(gameState === "fast"){
     fan1.rotationSpeed = 25;
-    fan2.rotationSpeed = 25;
-    fan3.rotationSpeed = 25;
-    fan4.rotationSpeed = 25;
+   //increase all fans speed to 25-30
   }
   else if(gameState === "slow"){
-    fan1.rotationSpeed = 2;
-    fan2.rotationSpeed = 2;
-    fan3.rotationSpeed = 2;
-    fan4.rotationSpeed = 2;
+   //decrease all the fans speed to 2-5
   }
+  //change the game states according to the keboard movement
+  //for the fast gamestate it is done
+  
   if(keyDown("f")){
    gameState = "fast"; 
   }
-  else if(keyDown("e")){
-   gameState = "stop"; 
-  }
-  else if(keyDown("space")){
-   gameState = "start"; 
-  }
-  else if(keyDown("s")){
-   gameState = "slow"; 
-  }
+  //for stop
+ 
+  //for start
+  
+  
+  //for slow
+
 }
